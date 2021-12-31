@@ -1,0 +1,26 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+
+.main
+    @include main()
+    display: flex
+    position: relative
+    margin-bottom: 100px
+    .posts
+        margin-right: 28px
+        max-width: 614px
+        width: 100%            
+    .sidebar
+        max-width: 293px
+        width: 100%
+
+
+    @include respond($breakpoint: ipad)
+        padding-top: 0
+        .posts
+            max-width: 600px
+            margin: auto
+        .sidebar
+            display: none
+    
+        

@@ -1,0 +1,45 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+@mixin userBox($wh)
+    .info
+        margin-left: 12px
+        display: flex
+        flex-direction: column
+        line-height: 18px
+        font-size: $fontSize14
+        flex: auto
+        .nickname
+            font-weight: 600
+            color: $textColorBlack
+            a
+                text-decoration: none
+                color: $textColorBlack
+
+                
+.post
+    width: 100%
+    display: flex
+    flex-direction: column
+    border: 1px solid $boderColor
+    margin-bottom: 24px
+    border-radius: 3px
+    .postHeader
+        display: flex
+        padding: 16px
+        box-sizing: border-box
+        height: 60px
+        align-items: center
+        .userdetail
+            padding: 8px 0
+            display: flex
+            align-items: center
+            width: 100%
+            @include userBox(32px)
+            .info
+                flex: auto
+            .dot
+                cursor: pointer
+
+    @include respond($breakpoint: phone)
+        border: none
+        

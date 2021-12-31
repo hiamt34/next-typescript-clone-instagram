@@ -1,0 +1,39 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+
+.image
+    width: 614px
+    max-height: 800px
+    position: relative
+    img
+        width: 100%
+        height: 100%
+    .layout
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: $backgroundGrey
+        z-index: -1
+.multiImg
+    button
+        width: 45px
+        height: 45px
+        z-index: 2
+        background-color: #0000
+        &:first-child
+            left: 0
+    ul
+        li
+            margin: 0
+            width: 10px
+            height: 10px
+            button
+                width: 10px
+                height: 10px
+                &::before
+                    width: 10px
+                    height: 10px
+                    font-size: 8px
+            

@@ -1,0 +1,6 @@
+export * from './header'
+export * from './headerMobile'
+export * from './footer'
+export * from './footerMobile'
+export * from './phoneSlice'
+export * from './downloadApp'

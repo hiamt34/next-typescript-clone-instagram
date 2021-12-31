@@ -1,0 +1,88 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+@mixin userBox($wh)
+    .imguser
+        width: $wh
+        height: $wh
+        border-radius: 50%
+        overflow: hidden
+        border: 1px solid $boderColor
+    .info
+        margin-left: 12px
+        display: flex
+        flex-direction: column
+        line-height: 18px
+        font-size: $fontSize14
+        flex: auto
+        .nickname
+            font-weight: 600
+            color: $textColorBlack
+        .name
+            font-weight: 400
+            color: $textColorGray
+    .choose
+        font-size: $fontSize12
+        color: $buttonColorBlue
+        text-decoration: none
+        font-weight: 600
+.sidebarMain
+    position: fixed
+    top: 88px
+    box-sizing: border-box
+    width: 293px
+    .sidebarConten
+        display: flex
+        flex-direction: column
+        .myaccount
+            margin-top: 18px
+            margin-bottom: 10px
+            display: flex
+            align-items: center
+            @include userBox(56px)
+        .accounts
+            .title
+                margin-top: 12px
+                display: flex
+                .node
+                    flex: auto
+                    font-size:  $fontSize14
+                    font-weight: 600
+                    color: $textColorGray
+                .all
+                    text-decoration: none
+                    color: $textColorBlack
+                    font-size: $fontSize12
+                    font-weight: 600
+            .users
+                .userdetail
+                    padding: 8px 0
+                    display: flex
+                    align-items: center
+                    @include userBox(32px)
+                    .node
+                        font-weight: 400
+                        color: $textColorGray
+                        font-size: $fontSize12
+    .sidebarFooter
+        display: flex
+        flex-direction: column
+        margin-top: 12px
+        .conten
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 16px
+            a
+                text-decoration: none
+                font-size: $fontSize11
+                line-height: 18px
+                color: $textColorWhiteGray
+                &::after
+                    content: '\00B7'
+                    margin: 0 .25em 0 .25em
+        .des
+            font-size: $fontSize12
+            color: $textColorWhiteGray
+
+    @include respond($breakpoint: ipad)
+        display: none
+                

@@ -1,0 +1,32 @@
+@mixin respond($breakpoint) 
+  @if $breakpoint == phone 
+    @media (max-width: 767px) 
+      @content
+    
+  @if $breakpoint == ipad 
+    @media (max-width: 768px) 
+      @content
+    
+  @if $breakpoint == ipadpro 
+    @media (max-width: 1024px) 
+      @content
+    
+  @if $breakpoint == desktop 
+    @media (min-width: 1025px) 
+      @content
+
+@mixin container()
+  margin: auto
+  max-width: 975px
+
+@mixin main()
+  margin: auto
+  max-width: 935px
+  margin-top: 54px
+  padding-top: 30px
+  
+  
+
+  
+    
+  

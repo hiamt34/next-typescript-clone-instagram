@@ -1,0 +1,10 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+.main
+    @include main()
+    @include respond($breakpoint: phone)
+        display: flex
+        flex-direction: column
+        padding-top: 0
+            
+        

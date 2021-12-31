@@ -1,0 +1,57 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+@mixin userBox($wh)
+    .imguser
+        width: $wh
+        height: $wh
+        border-radius: 50%
+        overflow: hidden
+        border: 1px solid $boderColor
+        box-sizing: border-box
+    .info
+        margin-left: 12px
+        display: flex
+        flex-direction: column
+        line-height: 18px
+        font-size: $fontSize14
+        flex: auto
+        .nickname
+            font-weight: 600
+            color: $textColorBlack
+        .outTime
+            font-weight: 400
+            color: $textColorGray
+
+.sidebar
+    width: 350px
+    border: 1px solid $boderColor
+    border-radius: 3px 0 0 3px
+    .header
+        height: 60px
+        padding: 0 20px
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        border-bottom: 1px solid $boderColor
+        .name
+            flex: auto
+            font-size: $fontSize16
+            font-weight: 600
+        .iconBook
+            display: inline-block
+            float: right
+            cursor: pointer
+    .body
+        height: 100%
+        overflow: hidden auto
+        padding-top: 8px
+        .account
+            cursor: pointer
+            display: flex
+            align-items: center
+            padding: 8px 20px
+            @include userBox(56px)
+            &:hover
+                background-color: $hoverBackgroundColor
+            

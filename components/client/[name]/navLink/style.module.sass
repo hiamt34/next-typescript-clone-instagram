@@ -1,0 +1,30 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+@mixin icon()
+    height: 52px
+    line-height: 52px
+    margin-right: 60px
+    cursor: pointer
+    .text
+        display: inline-block
+    &:last-child
+        margin-right: 0
+    @include respond($breakpoint: phone)
+        .text
+            display: none
+        svg
+            width: 24px
+            height: 24px
+.icon
+    @include icon()
+.iconActive
+    @include icon()
+    border-top: 1px solid $boderColorBlack
+    color: $textColorBlack
+    svg
+        fill: $textColorBlack
+    @include respond($breakpoint: phone)
+        border-top: 1px solid $textLightBlue
+        svg
+            fill: $textLightBlue
+

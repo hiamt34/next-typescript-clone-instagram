@@ -1,0 +1,41 @@
+@import ../../../styles/common/constance
+@import ../../../styles/common/mixin
+@mixin Icon()
+    font-size: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+        margin-right: 5px
+.item
+    width: 100%
+    cursor: pointer
+    position: relative
+    .multiPost
+        position: absolute
+        z-index: 3
+        top: 10px
+        right: 10px
+    .layout
+        display: none
+        transform: 0.6s
+    &:hover
+        .layout
+            transform: 0.6s
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            color: #fff
+            font-weight: 600
+            background-color: #0000003b
+            .like
+                margin-right: 10px
+                @include Icon()
+            .cmt
+                margin-left: 10px
+                @include Icon()

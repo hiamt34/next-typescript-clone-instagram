@@ -1,0 +1,18 @@
+@import ../../../../styles/common/constance
+@import ../../../../styles/common/mixin
+
+.news
+    padding: 16px 0
+    margin-bottom: 24px
+    border-radius: 3px
+    border: 1px solid $boderColor
+    .conten
+        height: 84px
+        width: 100%
+
+
+    @include respond($breakpoint: phone)
+        border: none
+        margin-bottom: 0
+        padding: 10px 0
+        border-bottom: 1px solid $boderColor

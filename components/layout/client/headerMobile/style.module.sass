@@ -1,0 +1,26 @@
+@import ../../../../styles/common/mixin
+@import ../../../../styles/common/constance
+
+.header
+    display: none
+    @include respond($breakpoint: phone)
+        display: flex
+        text-align: center
+        justify-content: space-between
+        height: 44px
+        padding: 0 16px
+        position: fixed
+        top: 2px
+        right: 0
+        left: 0
+        border-bottom: 1px solid $boderColor
+        line-height: 50px
+        background-color: $backgroundWhite
+        z-index: 3
+        box-sizing: border-box
+        .logo
+            margin-top: 6px
+        .mes
+            svg
+                width: 24px
+                height: 24px

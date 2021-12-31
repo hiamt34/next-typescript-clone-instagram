@@ -1,0 +1,144 @@
+@import ../../../../../styles/common/constance
+@import ../../../../../styles/common/mixin
+@mixin userBox($wh)
+    .info
+        margin-left: 12px
+        display: flex
+        flex-direction: column
+        line-height: 18px
+        font-size: $fontSize14
+        flex: auto
+        .nickname
+            font-weight: 600
+            color: $textColorBlack
+            a
+                text-decoration: none
+                color: $textColorBlack
+@mixin userCmt()
+    .nickname
+        a
+            text-decoration: none
+            color: $textColorBlack
+            margin-right: 2px
+            font-weight: 600
+            color: $textColorBlack
+            display: inline
+.container
+    @include main()
+    padding: 30px 20px 20px 
+    display: flex
+    flex-direction: column
+    .main
+        display: flex
+        .imgPost
+            max-width: 598px
+            height: auto
+            border: 1px solid $boderColor
+            border-radius: 3px 0 0 3px
+            overflow: hidden
+            ul
+                bottom: 15px !important
+        .infoPost
+            border: 1px solid $boderColor
+            border-left: none
+            border-radius: 0 3px 3px 0
+            overflow: hidden
+            width: 100%
+            height: auto
+            position: relative
+            display: flex
+            flex-direction: column
+            .postHeader
+                display: flex
+                padding: 16px
+                box-sizing: border-box
+                height: 60px
+                align-items: center
+                border-bottom: 1px solid $boderColor
+                .userdetail
+                    padding: 8px 0
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    @include userBox(32px)
+                    .info
+                        flex: auto
+                    .dot
+                        cursor: pointer
+            .column
+                display: flex
+                flex-direction: column
+                height: 100%
+                .postBody
+                    max-height: calc(100% - 150px)
+                    overflow-y: auto
+                    flex: auto
+                    .status
+                        margin-top: 20px
+                        padding: 0 16px
+                        margin-bottom: 10px
+                        font-size: $fontSize14
+                        font-weight: 400
+                        @include userCmt()
+                        display: flex                        
+                    .cmt
+                        margin-top: 20px
+                        padding: 0 20px
+                        margin-bottom: 4px
+                        font-size: $fontSize14
+                        font-weight: 400
+                        .userCmt
+                            margin-bottom: 12px
+                            @include userCmt()
+                            display: flex
+                            .item
+                                display: flex
+                                flex-direction: column
+                                .conten
+                                    display: flex
+                                    .likeCmt
+                                        svg
+                                            width: 12px
+                                            height: 12px
+                                            margin: auto
+                                            cursor: pointer
+                                .node
+                                    margin: 10px 0px
+                                    font-size: $fontSize12
+                                    font-weight: 600
+                                    color: $textColorGray
+                                    span
+                                        margin-right: 12px
+                    &::-webkit-scrollbar 
+                        display: none
+                .postFooter
+                    position: absolute
+                    bottom: 0
+                    width: 100%
+    .hr
+        width: 100%
+        margin: 50px 0
+        border-bottom: 1px solid $boderColor
+    .post
+        .viewAll
+            font-size: $fontSize14
+            color: $textColorGray
+            font-weight: 600
+            margin-bottom: 20px
+            a
+                text-decoration: none
+                color: $textColorBlack
+        .somePost
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 28px
+            margin-bottom: 30px
+            @include respond($breakpoint: phone)
+                grid-column-gap: 2px
+                grid-row-gap: 0px
+                padding-right: 0
+                padding-left: 0
+                padding-top: 0
+    @include respond($breakpoint: phone)
+        padding: 0
+            

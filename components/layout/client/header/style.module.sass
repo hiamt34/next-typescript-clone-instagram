@@ -1,0 +1,120 @@
+@import ../../../../styles/common/mixin
+@import ../../../../styles/common/constance
+
+.header
+    @include respond($breakpoint: phone)
+        display: none
+    height: 54px
+    border-bottom: 1px solid $boderColor
+    position: fixed
+    top: 0
+    width: 100%
+    background-color: $backgroundWhite
+    z-index: 3
+    .container
+        @include container()
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+        padding: 0 20px
+        box-sizing: border-box
+        .left
+            margin: auto 0 
+            .logo
+                margin-top: 5px
+        .conten
+            height: 28px
+            min-width: 125px
+            width: 215px
+            position: relative
+            input
+                outline: none
+                height: 100%
+                width: 100%
+                box-sizing: border-box
+                border: 1px solid $boderColor
+                text-align: center
+            .delete
+                // background-image: url(/client/login/logo.png)
+                background-image: url(/client/loading/load20.gif)
+                // background-position: -318px -333px
+                position: absolute
+                top: 4px
+                right: 5px
+                width: 20px
+                height: 20px
+                cursor: pointer
+        .right
+            .icons
+                display: flex
+                align-items: center
+                .icon
+                    margin-left: 22px
+                    position: relative
+                    .overlay
+                        position: fixed
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                    .image
+                        cursor: pointer
+                        overflow: hidden
+                        border-radius: 50%
+                        padding: 1px
+                        box-sizing: border-box
+                        width: 28px
+                        height: 28px
+                        position: relative
+                        .img
+                            position: absolute
+                            width: 22px
+                            height: 22px
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                    .box
+                        box-sizing: border-box
+                        display: flex
+                        flex-direction: column
+                        position: absolute
+                        box-shadow: 0 0 5px 1px $boxShadowColor
+                        background-color: $backgroundWhite
+                        top: 38px
+                        width: 230px
+                        right: -10px
+                        border-radius: 6px
+                        .x
+                            height: 14px
+                            width: 14px
+                            background-color: red
+                            transform: rotate(45deg) translateX(-50%)
+                            position: absolute
+                            top:-1px
+                            right: 10px
+                            box-shadow: 0 0 5px 1px $boxShadowColor
+                            background-color: $backgroundWhite
+                            &::after
+                                content: ""
+                                width: 14px
+                                height: 33px
+                                position: absolute
+                                transform: rotate(45deg)
+                                background-color: $backgroundWhite
+                        a
+                            text-decoration: none
+                            padding: 8px 16px
+                            font-size: $fontSize14
+                            color: $textColorBlack
+                            &:hover
+                                background-color: $hoverBackgroundColor
+                            svg
+                                margin-right: 12px
+                        .logout
+                            border-top: 1px solid $boderColor
+                            margin-bottom: 4px
+                        svg
+                            width: 16px
+                            height: 16px
+

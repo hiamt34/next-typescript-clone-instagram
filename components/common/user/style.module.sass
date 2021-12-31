@@ -1,0 +1,35 @@
+@import ../../../styles/common/mixin
+@import ../../../styles/common/constance
+@mixin user($wh)
+    .image
+        position: relative
+        width: $wh + 4px
+        height: $wh + 4px
+        background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)
+        // background-image: url(/client/loading/loadIns.gif)
+        border-radius: 50%
+        overflow: hidden
+        box-sizing: border-box
+        .img
+            box-sizing: border-box
+            position: absolute
+            top: 50%
+            left: 50%
+            width: $wh
+            height: $wh
+            transform: translate(-50%, -50%)
+            border: 2px solid $backgroundWhite
+            border-radius: 50%
+            overflow: hidden
+.bigUser
+    @include user($wh: 58px)
+
+.smallUser
+    @include user($wh: 36px)
+.LGUser
+    @include user($wh: 150px)
+    @include respond($breakpoint: phone)
+        @include user($wh: 77px)
+    
+    
+    
